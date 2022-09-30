@@ -1,0 +1,109 @@
+.navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 50 !important;
+    top: 20px;
+}
+
+.navbar nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h1 {
+    font-size: 2rem;
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.open,
+.close {
+    padding: 0;
+    display: flex;
+    align-self: center;
+    transition: 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.open li,
+.close li {
+    margin: 0 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    list-style: none;
+}
+.open li:nth-child(4),
+.close li:nth-child(4){
+    margin-right: 0;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+
+    .hamburger {
+        width: 35px;
+        height: 35px;
+        display: block;
+        position: relative;
+        top: -3px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 100%;
+        height: 3px;
+        background: #ffffff;
+        margin: auto;
+    }
+
+    .open {
+        flex-direction: column;
+        position: fixed;
+        height: calc(100vh - 100px);
+        top: 55px;
+        width: 92%;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-radius: 10px;
+        clip-path: circle(1200px at 0% 100%);
+        -webkit-clip-path: circle(1200px at 0% 100%);
+        border-radius: 25px;
+    }
+
+
+    .open li,
+    .close li {
+        margin: 30px 0;
+    }
+
+    .close {
+        flex-direction: column;
+        position: fixed;
+        height: calc(100vh - 100px);
+        top: 55px;
+        width: 92%;
+        align-items: center;
+        justify-content: center;
+        z-index: -10;
+        clip-path: circle(0 at 0% 0%);
+        -webkit-clip-path: circle(0px at 0% 0%);
+        border-radius: 25px;
+    }
+    .close li{
+        cursor: default;
+    }
+}

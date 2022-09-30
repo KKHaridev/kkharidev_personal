@@ -1,0 +1,73 @@
+.layout {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.circle1 {
+    position: absolute;
+    left: -30vh;
+    top: -30vh;
+    width: 60vw;
+    height: 60vw;
+    min-width: 45vh;
+    min-height: 45vh;
+    max-width: 60vh;
+    max-height: 60vh;
+    scale: 1.5;
+    border-radius: 50%;
+    filter: blur(20px);
+    background: linear-gradient(#1F6CAB, #129ECA, #00E6F6);
+    z-index: 0;
+}
+
+.circle2 {
+    position: absolute;
+    right: -14vh;
+    top: -14vh;
+    width: 20vw;
+    height: 20vw;
+    min-width: 28vh;
+    min-height: 28vh;
+    max-width: 35vh;
+    max-height: 35vh;
+    border-radius: 50%;
+    filter: blur(20px);
+    background: radial-gradient(#1F6CAB, #00E6F6);
+    z-index: 0;
+}
+
+.circle3 {
+    position: absolute;
+    right: -30vh;
+    bottom: -30vh;
+    width: 60vw;
+    height: 60vw;
+    min-width: 50vh;
+    min-height: 50vh;
+    max-width: 60vh;
+    max-height: 60vh;
+    border-radius: 50%;
+    filter: blur(20px);
+    background: radial-gradient(#1F6CAB, #00E6F6);
+    z-index: 0;
+}
+
+.circle4 {
+    position: absolute;
+    left: -15vh;
+    bottom: -15vh;
+    width: 20vw;
+    height: 20vw;
+    min-width: 25vh;
+    min-height: 25vh;
+    max-width: 35vh;
+    max-height: 35vh;
+    border-radius: 50%;
+    filter: blur(20px);
+    background: radial-gradient(#1F6CAB, #00E6F6);
+    z-index: 0;
+}
