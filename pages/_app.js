@@ -10,6 +10,13 @@ const MyApp=({ Component, pageProps })=> {
   }, []);
     return <>
       <Head>
+        <link
+          rel="preload"
+          href="../public/fonts/Elianto-Regular.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
         <title>K K HARIDEV</title>
         <meta name="description" content="Portfolio site" />
         <link rel="icon" href="/favicon.ico" />
