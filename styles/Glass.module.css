@@ -1,0 +1,27 @@
+.glass {
+    width: 98%;
+    margin: auto;
+    height: calc(100vh - 150px);
+    position: relative;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0px 6px 4px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 15px;
+    overflow-y: auto !important;
+}
+
+@media screen and (max-height:700px) {
+    .glass {
+        top: 0px !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .glass {
+        top: 20px;
+        height: calc(100vh - 150px);
+        padding: 5px;
+        box-sizing: border-box;
+    }
+}

@@ -11,6 +11,7 @@
 
 .h1 {
     font-size: 2rem;
+    margin: 15px 0;
 }
 
 .holder {
@@ -34,7 +35,7 @@
 }
 
 .h2 {
-    margin: 15px 0;
+    margin: 10px 0;
     font-size: 1.5rem;
     line-height: 1.5rem;
 }
@@ -100,7 +101,7 @@
 
     .h3 {
         font-size: 1.2rem;
-        line-height: 1.2rem;
+        line-height: 1.4rem;
     }
 
     .p {

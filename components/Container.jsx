@@ -1,4 +1,4 @@
-import style from "./Container.module.css";
+import style from "../styles/Container.module.css";
 
 export const Container = ({ children }) => {
     return (

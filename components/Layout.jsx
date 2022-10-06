@@ -1,6 +1,6 @@
-import { Navbar } from "../";
-import style from "./Layout.module.css";
-import style1 from "../../styles/Home.module.css"
+import { Navbar } from "./";
+import style from "../styles/Layout.module.css";
+import style1 from "../styles/Home.module.css"
 
 
 export const Layout = ({ children }) => {
