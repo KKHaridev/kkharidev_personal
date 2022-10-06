@@ -7,7 +7,7 @@ const nextConfig = {
       unoptimized: true,
     },
   },
-  basePath: '/ kkharidev_personal',
+  basePath: '/kkharidev_personal',
 }
 
 module.exports = nextConfig
