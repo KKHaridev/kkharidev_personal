@@ -29,9 +29,9 @@ export default function Contact() {
                         </div>
                     </div>
                     <div className={style.social}>
-                        <a href="https://github.com/KKHaridev" target="_blank"><AiFillGithub /></a>
-                        <a href="https://www.instagram.com/kkharidev178" target="_blank"><AiFillInstagram /></a>
-                        <a href="http://" target="_blank"><FaLinkedin /></a>
+                        <a href="https://github.com/KKHaridev" target="blank"><AiFillGithub /></a>
+                        <a href="https://www.instagram.com/kkharidev178" target="blank"><AiFillInstagram /></a>
+                        <a href="https://in.linkedin.com/in/kkharidev" target="blank"><FaLinkedin /></a>
                     </div>
                 </div>
             </Glass>
