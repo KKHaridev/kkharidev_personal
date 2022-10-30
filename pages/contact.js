@@ -7,14 +7,16 @@ import { BsFacebook } from "react-icons/bs"
 import { AiFillInstagram, AiFillGitlab, AiFillGithub } from "react-icons/ai"
 import { FaLinkedin } from "react-icons/fa"
 
+
 const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = {
-        name: e.target[1].value,
+        name: e.target[0].value,
         email: e.target[1].value,
         message: e.target[2].value,
     };
-    const google_script_url = process.env.APP_SCRIPT;
+    const google_script_url = `${process.env.NEXT_PUBLIC_APP_SCRIPT }`;
+    console.log(google_script_url);
     const encodedUrl =
         google_script_url +
         Object.keys(formData).reduce(
