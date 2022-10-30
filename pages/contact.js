@@ -15,7 +15,7 @@ const handleSubmit = async (e) => {
         email: e.target[1].value,
         message: e.target[2].value,
     };
-    const google_script_url = `${process.env.NEXT_PUBLIC_APP_SCRIPT }`;
+    const google_script_url = "https://script.google.com/macros/s/AKfycbwWsh4fudu3-t0NbP1b7pwX8HnTwjF1snY3b3mE4dYUjE40ynG2VgOLjfa_Bg8hchs/exec";
     console.log(google_script_url);
     const encodedUrl =
         google_script_url +
