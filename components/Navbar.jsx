@@ -12,7 +12,7 @@ export const Navbar = ({ }) => {
         <header className={style.navbar}>
             <Container>
                 <nav>
-                    <h1>HARIDEV</h1>
+                    <h1><Link href="/">HARIDEV</Link></h1>
                     <ul className={nav ? style.open : style.close} onMouseLeave={() => setNav(false)}>
                         <li className={router.asPath == "/" ? style.active : ""} onClick={() => setNav(!nav)}>
                             <Link href="/">HOME</Link>

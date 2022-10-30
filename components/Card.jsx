@@ -1,11 +1,13 @@
 import style from "../styles/Card.module.css";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export const Card1 = ({ imgUrl, company, link, status }) => {
+    const router = useRouter();
     return (
-        <div className={style.card}>
+        <div className={style.card} onClick={() => window.open(link, "_blank")}>
             <div className={style.left}>
-                <Image src={imgUrl} alt="" />
+                <Image src={imgUrl} alt="" layout="fill" />
             </div>
             <div className={style.right}>
                 <div className={style.content}>
@@ -20,9 +22,9 @@ export const Card1 = ({ imgUrl, company, link, status }) => {
 
 export const Card2 = ({ imgUrl, company, link, status }) => {
     return (
-        <div className={style.card2}>
+        <div className={style.card2} onClick={() => window.open(link, "_blank") }>
             <div className={style.left}>
-                <Image src={imgUrl} alt="" />
+                <Image src={imgUrl} alt="" layout="fill" />
             </div>
             <div className={style.right}>
                 <div className={style.content}>

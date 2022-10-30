@@ -1,47 +1,53 @@
 import React from 'react'
 import { Card1, Card2, Container1, Glass } from '../components'
 import bg from "../assets/site.png"
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
-const works = [
-    {
-        imgUrl: bg,
-        company: "CMC1",
-        link: "cryptomalluclub.com",
-        status: "2019 - Present"
-    },
-    {
-        imgUrl: bg,
-        company: "CMC2",
-        link: "cryptomalluclub.com",
-        status: "2019 - Present"
 
-    },
-    {
-        imgUrl: bg,
-        company: "CMC3",
-        link: "cryptomalluclub.com",
-        status: "2019 - Present"
+export async function getStaticProps() {
+    const client = new ApolloClient({
+        uri: 'https://api-ap-south-1.hygraph.com/v2/cl9b3c6ik3i1o01ug0c8l5cbv/master',
+        cache: new InMemoryCache()
+    });
+    const { data } = await client.query({
+        query: gql`
+    query Projects {
+  projects {
+    id
+    link
+    time
+    title
+    img {
+      url
+    }
+  }
+}
+  `
+    });
+    return {
+        props: {
+            works:  data.projects
+        },
+        revalidate: 10,
+    }
+}
 
-    },
-]
-
-export default function Works() {
+export default function Works({ works }) {
     return (
         <Container1>
             <Glass>
-                
-                {works.map((item,index)=>{
-                    const url=`https://${item.link}`
-                    return(
+
+                {works.map((item, index) => {
+                    return (
                         index % 2 == 0 ?
 
-                            <a href={url} target="blank" key={index}>
-                                <Card1 imgUrl={item.imgUrl} company={item.company} link={url} status={item.status} />
-                            </a>
+
+                                    <Card1 imgUrl={item.img.url} company={item.title} link={item.link} status={item.time} />
+                              
                             :
-                            <a href={url} target="blank" key={index}>
-                                <Card2 imgUrl={item.imgUrl} company={item.company} link={url} status={item.status} />
-                            </a>
+
+                                    <Card2 imgUrl={item.img.url} company={item.title} link={item.link} status={item.time} />
+                             
                     )
                 }
                 )}
@@ -49,3 +55,4 @@ export default function Works() {
         </Container1>
     )
 }
+
