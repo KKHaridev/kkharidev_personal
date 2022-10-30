@@ -73,7 +73,7 @@ export default function About({ experience, education }) {
                             }
                         </div>
                         <div className={style.right}>
-                            <Image src={bg} alt="image" />
+                            <Image src={bg} placeholder="blur" blurDataURL={bg} alt="image" />
                         </div>
                     </div>
                 </div>

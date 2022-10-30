@@ -7,7 +7,7 @@ export const Card1 = ({ imgUrl, company, link, status }) => {
     return (
         <div className={style.card} onClick={() => window.open(link, "_blank")}>
             <div className={style.left}>
-                <Image src={imgUrl} alt="" layout="fill" />
+                <Image src={imgUrl} placeholder="blur" blurDataURL={imgUrl} alt="" layout="fill" />
             </div>
             <div className={style.right}>
                 <div className={style.content}>
@@ -24,7 +24,7 @@ export const Card2 = ({ imgUrl, company, link, status }) => {
     return (
         <div className={style.card2} onClick={() => window.open(link, "_blank") }>
             <div className={style.left}>
-                <Image src={imgUrl} alt="" layout="fill" />
+                <Image src={imgUrl} placeholder="blur" blurDataURL={imgUrl} alt="" layout="fill" />
             </div>
             <div className={style.right}>
                 <div className={style.content}>

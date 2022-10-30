@@ -16,7 +16,6 @@ const handleSubmit = async (e) => {
         message: e.target[2].value,
     };
     const google_script_url = "https://script.google.com/macros/s/AKfycbwWsh4fudu3-t0NbP1b7pwX8HnTwjF1snY3b3mE4dYUjE40ynG2VgOLjfa_Bg8hchs/exec";
-    console.log(google_script_url);
     const encodedUrl =
         google_script_url +
         Object.keys(formData).reduce(
@@ -59,7 +58,7 @@ export default function Contact() {
                             <input type="submit" value="Send" />
                         </form>
                         <div className={style.right}>
-                            <Image src={bg} alt="image" />
+                            <Image src={bg} placeholder="blur" blurDataURL={bg} alt="image" />
                         </div>
                     </div>
                     <div className={style.social}>
