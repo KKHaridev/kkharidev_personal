@@ -12,7 +12,8 @@ export async function getStaticProps() {
     const { data } = await client.query({
         query: gql`
     query Projects {
-  projects {
+  projects (orderBy: createdAt_DESC) {
+    createdAt
     id
     link
     time

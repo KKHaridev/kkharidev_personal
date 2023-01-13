@@ -14,12 +14,12 @@ export async function getStaticProps() {
     const { data } = await client.query({
         query: gql`
     query About {
-        experiences {
+        experiences (orderBy: createdAt_DESC){
             firm,
             time,
             designation
         }
-        educations {
+        educations (orderBy: createdAt_DESC){
             institution,
             time,
             program
