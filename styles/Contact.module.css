@@ -47,6 +47,9 @@
     width: min(95%, 380px);
     text-align: left;
 }
+.left textarea{
+    min-height: 40px;
+}
 
 .left input:focus,
 .left textarea:focus {
